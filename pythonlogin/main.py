@@ -15,6 +15,9 @@ app.config['MYSQL_DB'] = 'pythonlogin'
 
 # Intialize MySQL
 mysql = MySQL(app) 
+@app.route('/')
+def sakums():
+    return render_template('index.htm')
 # http://localhost:5000/pythonlogin/ - the following will be our login page, which will use both GET and POST requests
 @app.route('/pythonlogin/', methods=['GET', 'POST'])
 def login():
